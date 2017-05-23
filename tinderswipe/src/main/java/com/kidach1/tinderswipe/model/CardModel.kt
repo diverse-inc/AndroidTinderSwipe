@@ -6,7 +6,7 @@ import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import com.kidach1.tinderswipe.view.CardContainer
 
-class CardModel(var name: String, var description: String, var cardImageUrl: String) {
+open class CardModel(var name: String, var description: String, var cardImageUrl: String) {
 	var onCardDismissedListener: OnCardDismissedListener? = null
 	var onClickListener: OnClickListener? = null
 
