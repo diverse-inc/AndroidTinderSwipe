@@ -43,6 +43,12 @@ class CardContainer : AdapterView<ListAdapter> {
             super.onChanged()
             clearStack()
             ensureFull()
+            if (getChildCount() != 0) {
+                mTopCard = getChildAt(getChildCount() - 1);
+                mTopCard.setLayerType(LAYER_TYPE_HARDWARE, null);
+            }
+            mNumberOfCards = getAdapter().getCount();
+            requestLayout();
         }
 
         override fun onInvalidated() {
