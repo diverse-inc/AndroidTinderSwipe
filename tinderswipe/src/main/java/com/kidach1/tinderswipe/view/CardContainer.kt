@@ -45,7 +45,7 @@ class CardContainer : AdapterView<ListAdapter> {
             ensureFull()
             if (getChildCount() != 0) {
                 mTopCard = getChildAt(getChildCount() - 1);
-                mTopCard.setLayerType(LAYER_TYPE_HARDWARE, null);
+                mTopCard!!.setLayerType(LAYER_TYPE_HARDWARE, null);
             }
             mNumberOfCards = getAdapter().getCount();
             requestLayout();
